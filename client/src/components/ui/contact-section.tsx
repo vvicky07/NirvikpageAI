@@ -87,9 +87,9 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-2">Visit Us</h3>
                   <p className="text-neutral-700">
-                    Nirvik Tower, 123 Business Park<br />
-                    Sector 42, Gurugram 122001<br />
-                    Haryana, India
+                    Nirvik Tower<br />
+                    Bhilai, Chhattisgarh<br />
+                    India
                   </p>
                 </div>
               </div>
@@ -123,8 +123,7 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-lg font-medium mb-2">Call Us</h3>
                   <p className="text-neutral-700">
-                    +91 124 456 7890<br />
-                    +91 124 456 7891
+                    +91 07883591261
                   </p>
                 </div>
               </div>
