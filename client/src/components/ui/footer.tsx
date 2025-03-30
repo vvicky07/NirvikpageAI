@@ -99,6 +99,8 @@ const Footer = () => {
               <li><a href="#" className="text-neutral-400 hover:text-white transition duration-300">Nirvik Solar</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition duration-300">Vikram Singh & Power</a></li>
               <li><a href="#" className="text-neutral-400 hover:text-white transition duration-300">Nirvik Engineering</a></li>
+              <li><a href="#" className="text-neutral-400 hover:text-white transition duration-300">Nirvik Agro</a></li>
+              <li><a href="#" className="text-neutral-400 hover:text-white transition duration-300">Nirvik PCC Poles</a></li>
             </ul>
           </div>
           
