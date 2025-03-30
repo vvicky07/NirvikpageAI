@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SolarCalculator from "./solar-calculator";
 
 interface BusinessCardProps {
   title: string;
@@ -215,111 +216,14 @@ const businessDetails: Record<string, BusinessDetail> = {
         id: "calculator",
         label: "Solar Calculator",
         content: (
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">PM Surya Ghar Yojana Solar Calculator</h3>
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Interactive Solar Rooftop Calculator</h3>
             <p className="mb-6">
-              Estimate your solar installation costs, subsidies, and savings with our comprehensive calculator based on the PM Surya Ghar Yojana program.
+              Use our advanced calculator to estimate your solar potential, electricity savings, and return on investment based on your location and energy usage.
             </p>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-6">
-                  <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
-                    <h4 className="font-bold text-lg mb-2 text-yellow-700">Input Parameters</h4>
-                    
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-medium mb-1">Average Monthly Electricity Bill (₹)</label>
-                        <input type="text" className="w-full p-2 border rounded" placeholder="e.g., 3000" />
-                      </div>
-                      
-                      <div>
-                        <label className="block text-sm font-medium mb-1">Rooftop Type</label>
-                        <select className="w-full p-2 border rounded">
-                          <option>Flat Concrete Roof</option>
-                          <option>Sloped Metal Roof</option>
-                          <option>Sloped Tiled Roof</option>
-                        </select>
-                      </div>
-                      
-                      <div>
-                        <label className="block text-sm font-medium mb-1">State</label>
-                        <select className="w-full p-2 border rounded">
-                          <option>Chhattisgarh</option>
-                          <option>Maharashtra</option>
-                          <option>Gujarat</option>
-                          <option>Tamil Nadu</option>
-                          <option>Karnataka</option>
-                          <option>Other States</option>
-                        </select>
-                      </div>
-                      
-                      <div>
-                        <label className="block text-sm font-medium mb-1">System Capacity (kW)</label>
-                        <div className="flex items-center space-x-2">
-                          <input type="range" min="1" max="10" step="1" className="w-full" />
-                          <span className="font-medium">3 kW</span>
-                        </div>
-                      </div>
-                      
-                      <Button className="w-full mt-4 bg-primary hover:bg-primary-dark">Calculate</Button>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="bg-green-50 p-4 rounded-lg border border-green-100">
-                    <h4 className="font-bold text-lg mb-2 text-green-700">Estimated Results</h4>
-                    <div className="space-y-3">
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>System Size:</span>
-                        <span className="font-bold">3 kW</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>Total System Cost:</span>
-                        <span className="font-bold">₹1,65,000</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>Central Subsidy:</span>
-                        <span className="font-bold text-green-600">₹60,000</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>State Subsidy:</span>
-                        <span className="font-bold text-green-600">₹15,000</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>Net Cost After Subsidy:</span>
-                        <span className="font-bold">₹90,000</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>Generation (Annual):</span>
-                        <span className="font-bold">4,380 kWh</span>
-                      </div>
-                      <div className="flex justify-between border-b border-green-100 pb-2">
-                        <span>Monthly Savings:</span>
-                        <span className="font-bold text-green-600">₹2,865</span>
-                      </div>
-                      <div className="flex justify-between pb-2">
-                        <span>Payback Period:</span>
-                        <span className="font-bold">2.5 years</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
-                    <h4 className="font-bold text-md mb-1 text-blue-700">Environmental Impact</h4>
-                    <div className="flex justify-between">
-                      <span>CO₂ Reduction:</span>
-                      <span className="font-bold">4.2 tons/year</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-sm text-neutral-500 mt-2 italic">
-                    This is an estimate based on current rates. Contact us for a detailed assessment and proposal tailored to your specific needs.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Render the SolarCalculator component */}
+            <SolarCalculator />
           </div>
         )
       }
