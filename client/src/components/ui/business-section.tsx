@@ -83,14 +83,29 @@ const businessDetails: Record<string, BusinessDetail> = {
         label: "Why Alkaline",
         content: (
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Benefits of Alkaline Water</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li><span className="font-medium">Neutralizes Acidity:</span> Helps balance the body's pH levels</li>
-              <li><span className="font-medium">Better Hydration:</span> Smaller water molecule clusters for faster absorption</li>
-              <li><span className="font-medium">Antioxidant Properties:</span> Contains negative oxidation-reduction potential (ORP) to help neutralize free radicals</li>
-              <li><span className="font-medium">Enhanced Recovery:</span> Supports faster recovery after intense physical activity</li>
-              <li><span className="font-medium">Improved Digestion:</span> May help alleviate acid reflux and improve digestive health</li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Benefits of Alkaline Water</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li><span className="font-medium">Neutralizes Acidity:</span> Helps balance the body's pH levels</li>
+                  <li><span className="font-medium">Better Hydration:</span> Smaller water molecule clusters for faster absorption</li>
+                  <li><span className="font-medium">Antioxidant Properties:</span> Contains negative oxidation-reduction potential (ORP) to help neutralize free radicals</li>
+                  <li><span className="font-medium">Enhanced Recovery:</span> Supports faster recovery after intense physical activity</li>
+                  <li><span className="font-medium">Improved Digestion:</span> May help alleviate acid reflux and improve digestive health</li>
+                </ul>
+              </div>
+              <div className="flex flex-col justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDl8fHdhdGVyJTIwYm90dGxlfGVufDB8fHx8MTcwMzE0MTQwNnww&auto=format&fit=crop&w=600&q=80" 
+                  alt="Alkaline Water Bottles" 
+                  className="rounded-lg shadow-lg"
+                />
+                <div className="bg-blue-50 p-4 rounded-lg mt-4 text-center">
+                  <div className="text-blue-500 font-semibold">pH 8.5+</div>
+                  <div className="text-sm text-blue-600">Optimum alkalinity for health benefits</div>
+                </div>
+              </div>
+            </div>
           </div>
         )
       },
@@ -99,20 +114,38 @@ const businessDetails: Record<string, BusinessDetail> = {
         label: "Why Us",
         content: (
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">The Nirvik Alkaline Difference</h3>
-            <p>
-              What sets Nirvik Alkaline apart is our unwavering commitment to quality and innovation. Our water undergoes a 7-stage 
-              filtration process that removes impurities while preserving essential minerals. We use state-of-the-art ionization 
-              technology to produce consistently high-quality alkaline water with a stable pH.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div className="bg-primary/10 p-4 rounded-lg">
-                <h4 className="font-bold mb-2">Advanced Filtration</h4>
-                <p>Multi-stage purification process that eliminates contaminants while preserving beneficial minerals</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-2">
+                <h3 className="text-2xl font-bold">The Nirvik Alkaline Difference</h3>
+                <p className="mt-3">
+                  What sets Nirvik Alkaline apart is our unwavering commitment to quality and innovation. Our water undergoes a 7-stage 
+                  filtration process that removes impurities while preserving essential minerals. We use state-of-the-art ionization 
+                  technology to produce consistently high-quality alkaline water with a stable pH.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="bg-primary/10 p-4 rounded-lg">
+                    <h4 className="font-bold mb-2">Advanced Filtration</h4>
+                    <p>Multi-stage purification process that eliminates contaminants while preserving beneficial minerals</p>
+                  </div>
+                  <div className="bg-primary/10 p-4 rounded-lg">
+                    <h4 className="font-bold mb-2">Consistent Quality</h4>
+                    <p>Rigorous testing ensures every bottle meets our high standards for purity and alkalinity</p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-primary/10 p-4 rounded-lg">
-                <h4 className="font-bold mb-2">Consistent Quality</h4>
-                <p>Rigorous testing ensures every bottle meets our high standards for purity and alkalinity</p>
+              <div className="order-first md:order-last">
+                <div className="relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1610483832795-4d8e2c76d581?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3MDMxNDE0MDZ8MA&auto=format&fit=crop&w=600&q=80" 
+                    alt="Premium Alkaline Water Bottles" 
+                    className="rounded-lg shadow-lg"
+                  />
+                  <div className="absolute bottom-4 right-4">
+                    <div className="bg-white/90 text-primary font-bold py-2 px-4 rounded-full text-sm shadow-md">
+                      Premium Quality
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -183,34 +216,108 @@ const businessDetails: Record<string, BusinessDetail> = {
         label: "Solar Calculator",
         content: (
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Solar System Requirements Calculator</h3>
+            <h3 className="text-2xl font-bold">PM Surya Ghar Yojana Solar Calculator</h3>
             <p className="mb-6">
-              Use our simplified calculator to estimate your solar power requirements based on your energy consumption and available space.
+              Estimate your solar installation costs, subsidies, and savings with our comprehensive calculator based on the PM Surya Ghar Yojana program.
             </p>
+            
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="grid grid-cols-1 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Average Monthly Electricity Bill (₹)</label>
-                  <input type="text" className="w-full p-2 border rounded" placeholder="e.g., 3000" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                    <h4 className="font-bold text-lg mb-2 text-yellow-700">Input Parameters</h4>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <label className="block text-sm font-medium mb-1">Average Monthly Electricity Bill (₹)</label>
+                        <input type="text" className="w-full p-2 border rounded" placeholder="e.g., 3000" />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium mb-1">Rooftop Type</label>
+                        <select className="w-full p-2 border rounded">
+                          <option>Flat Concrete Roof</option>
+                          <option>Sloped Metal Roof</option>
+                          <option>Sloped Tiled Roof</option>
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium mb-1">State</label>
+                        <select className="w-full p-2 border rounded">
+                          <option>Chhattisgarh</option>
+                          <option>Maharashtra</option>
+                          <option>Gujarat</option>
+                          <option>Tamil Nadu</option>
+                          <option>Karnataka</option>
+                          <option>Other States</option>
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium mb-1">System Capacity (kW)</label>
+                        <div className="flex items-center space-x-2">
+                          <input type="range" min="1" max="10" step="1" className="w-full" />
+                          <span className="font-medium">3 kW</span>
+                        </div>
+                      </div>
+                      
+                      <Button className="w-full mt-4 bg-primary hover:bg-primary-dark">Calculate</Button>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Available Roof Area (sq. meters)</label>
-                  <input type="text" className="w-full p-2 border rounded" placeholder="e.g., 50" />
+                
+                <div className="space-y-4">
+                  <div className="bg-green-50 p-4 rounded-lg border border-green-100">
+                    <h4 className="font-bold text-lg mb-2 text-green-700">Estimated Results</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>System Size:</span>
+                        <span className="font-bold">3 kW</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>Total System Cost:</span>
+                        <span className="font-bold">₹1,65,000</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>Central Subsidy:</span>
+                        <span className="font-bold text-green-600">₹60,000</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>State Subsidy:</span>
+                        <span className="font-bold text-green-600">₹15,000</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>Net Cost After Subsidy:</span>
+                        <span className="font-bold">₹90,000</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>Generation (Annual):</span>
+                        <span className="font-bold">4,380 kWh</span>
+                      </div>
+                      <div className="flex justify-between border-b border-green-100 pb-2">
+                        <span>Monthly Savings:</span>
+                        <span className="font-bold text-green-600">₹2,865</span>
+                      </div>
+                      <div className="flex justify-between pb-2">
+                        <span>Payback Period:</span>
+                        <span className="font-bold">2.5 years</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <h4 className="font-bold text-md mb-1 text-blue-700">Environmental Impact</h4>
+                    <div className="flex justify-between">
+                      <span>CO₂ Reduction:</span>
+                      <span className="font-bold">4.2 tons/year</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-neutral-500 mt-2 italic">
+                    This is an estimate based on current rates. Contact us for a detailed assessment and proposal tailored to your specific needs.
+                  </p>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Your Location</label>
-                  <select className="w-full p-2 border rounded">
-                    <option>North India</option>
-                    <option>East India</option>
-                    <option>South India</option>
-                    <option>West India</option>
-                    <option>Central India</option>
-                  </select>
-                </div>
-                <Button className="mt-4 bg-primary hover:bg-primary-dark">Calculate Requirements</Button>
-                <p className="text-sm text-neutral-500 mt-2">
-                  This is an estimate only. Contact us for a detailed assessment and proposal.
-                </p>
               </div>
             </div>
           </div>
@@ -871,7 +978,7 @@ const BusinessSection = () => {
     {
       title: "Nirvik Alkaline",
       description: "Revolutionizing hydration with premium alkaline water solutions for better health and wellness.",
-      image: "https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGFsa2FsaW5lJTIwd2F0ZXJ8ZW58MHx8fHwxNjk4OTQ0MzMzfDA&auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE2OTg5NDQzMzN8MA&auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Nirvik Solar",
