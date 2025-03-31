@@ -1,6 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { scrollToSection } from "@/lib/utils";
 import gsap from "gsap";
+// Import Swiper and required modules
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
 // Import uploaded images
 import nirvikImage1 from "@assets/Screenshot_28-1-2025_12732_.jpeg";
 import nirvikImage2 from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
@@ -99,9 +105,20 @@ const HeroSection = () => {
             Building tomorrow's infrastructure with today's responsibility
           </p>
           
-          {/* Business Segments Preview */}
-          <div className="flex justify-center mb-10 overflow-x-auto pb-2 max-w-5xl mx-auto">
-            <div className="flex space-x-4 md:space-x-6">
+          {/* Business Segments Preview - Slider */}
+          <div className="mb-10 max-w-5xl mx-auto">
+            <Swiper
+              modules={[Autoplay, EffectFade]}
+              spaceBetween={8}
+              slidesPerView="auto"
+              centeredSlides={true}
+              loop={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              className="w-full"
+            >
               {[
                 {name: "Alkaline", image: nirvikImage2},
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
@@ -109,25 +126,26 @@ const HeroSection = () => {
                 {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "PCC Poles", image: "https://images.unsplash.com/photo-1530240885906-317828ba21d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
               ].map((segment, index) => (
-                <div 
-                  key={index}
-                  className="relative group cursor-pointer"
-                  onClick={() => scrollToSection("businesses")}
-                >
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-lg transition-all group-hover:border-primary/70 group-hover:scale-105">
-                    <img 
-                      src={segment.image} 
-                      alt={`${segment.name} Business`} 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-full"></div>
+                <SwiperSlide key={index} className="!w-auto">
+                  <div 
+                    className="relative group cursor-pointer mx-2"
+                    onClick={() => scrollToSection("businesses")}
+                  >
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/40 shadow-lg transition-all group-hover:border-primary/70 group-hover:scale-105">
+                      <img 
+                        src={segment.image} 
+                        alt={`${segment.name} Business`} 
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-full"></div>
+                    </div>
+                    <div className="absolute bottom-1 left-0 right-0 text-center">
+                      <span className="text-white text-xs font-medium bg-black/40 px-2 py-1 rounded-full">{segment.name}</span>
+                    </div>
                   </div>
-                  <div className="absolute bottom-1 left-0 right-0 text-center">
-                    <span className="text-white text-xs font-medium bg-black/40 px-2 py-1 rounded-full">{segment.name}</span>
-                  </div>
-                </div>
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
