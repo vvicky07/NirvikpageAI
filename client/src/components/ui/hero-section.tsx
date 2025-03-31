@@ -51,39 +51,49 @@ const HeroSection = () => {
             className="w-full h-full"
           >
             <SwiperSlide>
-              <img 
-                src={nirvikImage2} 
-                alt="Nirvik Group Corporate Background"
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <img 
+                  src={nirvikImage2} 
+                  alt="Nirvik Group Corporate Background"
+                  className="hero-background-image"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img 
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
-                alt="Nirvik Solar"
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  alt="Nirvik Solar"
+                  className="w-full h-full object-contain max-h-screen"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
-                alt="Nirvik Engineering"
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  alt="Nirvik Engineering"
+                  className="w-full h-full object-contain max-h-screen"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img 
-                src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
-                alt="Nirvik Agro"
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  alt="Nirvik Agro"
+                  className="w-full h-full object-contain max-h-screen"
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img 
-                src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
-                alt="Nirvik PCC Poles"
-                className="w-full h-full object-cover"
-              />
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  alt="Nirvik PCC Poles"
+                  className="w-full h-full object-contain max-h-screen"
+                />
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
@@ -107,11 +117,11 @@ const HeroSection = () => {
         </div>
         
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/80 to-black/40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/90 to-black/60"></div>
       </div>
       
       {/* Hero Content */}
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-center px-6">
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-center px-6 z-10">
         <div className="max-w-5xl slide-up" ref={heroContentRef}>
           {/* Animated Logo */}
           <div className="mb-8 flex justify-center">
@@ -141,10 +151,10 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white font-montserrat leading-tight shadow-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white font-montserrat leading-tight shadow-text drop-shadow-lg">
             Powering a Sustainable Future with Innovation & Resilience
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto shadow-text">
+          <p className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto shadow-text drop-shadow-lg">
             Building tomorrow's infrastructure with today's responsibility
           </p>
           
