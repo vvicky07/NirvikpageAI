@@ -80,7 +80,7 @@ const HeroSection = () => {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80&fit=crop&crop=edges" 
                   alt="Nirvik Agro"
                   className="hero-background-image"
                 />
@@ -89,7 +89,7 @@ const HeroSection = () => {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  src="@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg" 
                   alt="Nirvik PCC Poles"
                   className="hero-background-image"
                 />
@@ -176,8 +176,8 @@ const HeroSection = () => {
                 {name: "Alkaline", image: nirvikImage2},
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
-                {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
-                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
+                {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80&fit=crop&crop=edges"},
+                {name: "PCC Poles", image: "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg"}
               ].map((segment, index) => (
                 <SwiperSlide key={index} className="!w-auto">
                   <div 

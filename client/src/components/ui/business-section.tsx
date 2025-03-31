@@ -24,7 +24,7 @@ const BusinessCard = ({ title, description, image, onClick }: BusinessCardProps)
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          className="business-card-image transition-transform duration-500 hover:scale-110"
         />
       </div>
       <div className="p-6">
@@ -850,7 +850,7 @@ const businessDetails: Record<string, BusinessDetail> = {
         content: (
           <div className="space-y-4">
             <img 
-              src="https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+              src="@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg" 
               alt="Nirvik PCC Poles Manufacturing" 
               className="poles-image rounded-lg mb-6"
             />
@@ -1058,12 +1058,12 @@ const BusinessSection = () => {
     {
       title: "Nirvik Agro",
       description: "Organic vegetables and fruits processing for healthier food choices and sustainable agriculture.",
-      image: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxvcmdhbmljJTIwZmFybXxlbnwwfHx8fDE2OTg5NDQ1MDB8MA&auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxvcmdhbmljJTIwZmFybXxlbnwwfHx8fDE2OTg5NDQ1MDB8MA&auto=format&fit=crop&w=600&q=80&fit=crop&crop=edges"
     },
     {
       title: "Nirvik PCC Poles",
       description: "Manufacturing high-quality PCC and RCC poles with advanced fabrication capabilities for infrastructure projects.",
-      image: "https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+      image: "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg"
     }
   ];
 
