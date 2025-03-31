@@ -850,7 +850,7 @@ const businessDetails: Record<string, BusinessDetail> = {
         content: (
           <div className="space-y-4">
             <img 
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxjb25jcmV0ZSUyMHBvbGV8ZW58MHx8fHwxNjk4OTQ0MzMzfDA&auto=format&fit=crop&w=600&q=80" 
+              src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
               alt="Nirvik PCC Poles Manufacturing" 
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
@@ -1063,7 +1063,7 @@ const BusinessSection = () => {
     {
       title: "Nirvik PCC Poles",
       description: "Manufacturing high-quality PCC and RCC poles with advanced fabrication capabilities for infrastructure projects.",
-      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE2fHxjb25jcmV0ZSUyMHBvbGV8ZW58MHx8fHwxNjk4OTQ0NTIwfDA&auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
     }
   ];
 

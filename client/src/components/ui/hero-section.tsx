@@ -36,13 +36,56 @@ const HeroSection = () => {
     <section id="home" className="relative h-screen w-full overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-full bg-neutral-900">
-        {/* Background Image for desktop */}
+        {/* Background Image Slider */}
         <div className="hidden md:block w-full h-full object-cover">
-          <img 
-            src={nirvikImage2} 
-            alt="Nirvik Group Corporate Background"
-            className="w-full h-full object-cover"
-          />
+          <Swiper
+            modules={[Autoplay, EffectFade]}
+            effect="fade"
+            spaceBetween={0}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            className="w-full h-full"
+          >
+            <SwiperSlide>
+              <img 
+                src={nirvikImage2} 
+                alt="Nirvik Group Corporate Background"
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img 
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                alt="Nirvik Solar"
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img 
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                alt="Nirvik Engineering"
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img 
+                src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                alt="Nirvik Agro"
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img 
+                src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                alt="Nirvik PCC Poles"
+                className="w-full h-full object-cover"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
         
         {/* Fallback image for mobile */}
@@ -124,7 +167,7 @@ const HeroSection = () => {
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
-                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1530240885906-317828ba21d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
+                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
               ].map((segment, index) => (
                 <SwiperSlide key={index} className="!w-auto">
                   <div 
