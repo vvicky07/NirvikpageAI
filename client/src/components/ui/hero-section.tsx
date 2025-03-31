@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 // Import uploaded images
 import nirvikImage1 from "@assets/Screenshot_28-1-2025_12732_.jpeg";
 import nirvikImage2 from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
+import pccPolesImage from "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg";
 
 const HeroSection = () => {
   const heroContentRef = useRef<HTMLDivElement>(null);
@@ -89,7 +90,7 @@ const HeroSection = () => {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg" 
+                  src={pccPolesImage} 
                   alt="Nirvik PCC Poles"
                   className="hero-background-image"
                 />
@@ -177,7 +178,7 @@ const HeroSection = () => {
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80&fit=crop&crop=edges"},
-                {name: "PCC Poles", image: "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg"}
+                {name: "PCC Poles", image: pccPolesImage}
               ].map((segment, index) => (
                 <SwiperSlide key={index} className="!w-auto">
                   <div 
