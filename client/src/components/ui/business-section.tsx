@@ -69,54 +69,91 @@ const businessDetails: Record<string, BusinessDetail> = {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full flex items-center justify-center">
                   {/* SVG Water Bottle */}
-                  <div className="relative w-40 h-64">
+                  <div className="relative w-52 h-64">
                     {/* Premium Bottle */}
-                    <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                    <svg viewBox="0 0 130 300" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                      {/* Background Glow */}
+                      <radialGradient id="bottleGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.6" />
+                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                      </radialGradient>
+                      <ellipse cx="65" cy="150" rx="60" ry="130" fill="url(#bottleGlow)" />
+                      
                       {/* Bottle Cap */}
-                      <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
-                      <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
+                      <rect x="42" y="8" width="32" height="15" rx="3" fill="#0369a1" />
+                      <rect x="48" y="18" width="20" height="5" rx="1" fill="#0284c7" />
                       
-                      {/* Bottle Neck */}
-                      <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
-                      <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                      
-                      {/* Bottle Shoulder */}
-                      <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
-                      
-                      {/* Bottle Body - Sleek Design */}
-                      <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                      
-                      {/* Water Fill with Gradient */}
+                      {/* Bottle Neck with Glass Effect */}
                       <defs>
-                        <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
-                          <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                        <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7" />
+                          <stop offset="45%" stopColor="#dbeafe" stopOpacity="0.2" />
+                          <stop offset="55%" stopColor="#dbeafe" stopOpacity="0.2" />
+                          <stop offset="100%" stopColor="#ffffff" stopOpacity="0.7" />
                         </linearGradient>
                       </defs>
-                      <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient)" />
+                      <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="url(#glassGradient)" />
+                      <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                       
-                      {/* Bottle Shine */}
-                      <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
+                      {/* Bottle Shoulder with Modern Shape */}
+                      <path d="M50,50 L40,68 Q35,78 40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85 Q95,78 90,68 L80,50" fill="url(#glassGradient)" />
                       
-                      {/* Elegant Label Background with Gradient */}
+                      {/* Bottle Body Contour */}
+                      <path d="M40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85" fill="none" stroke="#93c5fd" strokeWidth="0.8" />
+                      <path d="M43,85 L43,257 Q43,277 65,277 Q87,277 87,257 L87,85" fill="none" stroke="#bfdbfe" strokeWidth="0.3" />
+                      
+                      {/* Water Fill with Enhanced Gradient */}
                       <defs>
-                        <linearGradient id="labelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <linearGradient id="enhancedWaterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.1" />
+                          <stop offset="20%" stopColor="#60a5fa" stopOpacity="0.2" />
+                          <stop offset="100%" stopColor="#2563eb" stopOpacity="0.3" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M42,90 L88,90 L88,260 Q88,278 65,278 Q42,278 42,260 Z" fill="url(#enhancedWaterGradient)" />
+                      
+                      {/* Shine and Reflections */}
+                      <path d="M42,60 Q42,140 42,200 L45,200 Q45,140 48,60" fill="white" fillOpacity="0.4" />
+                      <path d="M83,60 Q83,100 83,150 L80,150 Q80,100 77,60" fill="white" fillOpacity="0.3" />
+                      
+                      {/* Elegant Label with Premium Design */}
+                      <defs>
+                        <linearGradient id="premiumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#1e40af" />
-                          <stop offset="100%" stopColor="#3b82f6" />
+                          <stop offset="50%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#1e40af" />
+                        </linearGradient>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#fbbf24" />
+                          <stop offset="50%" stopColor="#f59e0b" />
+                          <stop offset="100%" stopColor="#d97706" />
                         </linearGradient>
                       </defs>
-                      <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient)" strokeWidth="1.5" />
                       
-                      {/* Water Droplet Logo */}
-                      <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                      {/* Label Background */}
+                      <rect x="38" y="110" width="54" height="90" rx="4" fill="white" stroke="url(#premiumGradient)" strokeWidth="1.5" />
                       
-                      {/* Label Text */}
-                      <text x="50" y="155" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
-                      <text x="50" y="170" fontFamily="Arial" fontSize="9" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                      {/* Premium Gold Accent Line */}
+                      <rect x="38" y="125" width="54" height="2" fill="url(#goldGradient)" />
+                      <rect x="38" y="185" width="54" height="2" fill="url(#goldGradient)" />
                       
-                      {/* pH Circle */}
-                      <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
-                      <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                      {/* Brand Logo - Stylized Water Drop */}
+                      <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="#3b82f6" fillOpacity="0.7" />
+                      <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="none" stroke="#1e40af" strokeWidth="0.5" />
+                      
+                      {/* Brand Name */}
+                      <text x="65" y="145" fontFamily="Arial" fontSize="12" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                      <text x="65" y="165" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                      
+                      {/* pH Value in Modern Badge */}
+                      <rect x="50" y="175" width="30" height="15" rx="7.5" fill="#dbeafe" stroke="#60a5fa" strokeWidth="0.5" />
+                      <text x="65" y="185" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                      
+                      {/* Premium Badge */}
+                      <g transform="translate(90, 105) rotate(30)">
+                        <circle cx="0" cy="0" r="15" fill="#fef3c7" stroke="url(#goldGradient)" strokeWidth="1" />
+                        <text x="0" y="3" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#92400e">PREMIUM</text>
+                      </g>
                     </svg>
                   </div>
                   
@@ -183,53 +220,84 @@ const businessDetails: Record<string, BusinessDetail> = {
                       </div>
                       
                       {/* Bottle 2 - Center, larger */}
-                      <div className="relative w-28 h-48 z-10">
-                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                      <div className="relative w-32 h-48 z-10">
+                        <svg viewBox="0 0 130 300" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Background Glow */}
+                          <radialGradient id="bottleGlow2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.6" />
+                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                          </radialGradient>
+                          <ellipse cx="65" cy="150" rx="60" ry="130" fill="url(#bottleGlow2)" />
+                          
                           {/* Bottle Cap */}
-                          <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
-                          <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
+                          <rect x="42" y="8" width="32" height="15" rx="3" fill="#0369a1" />
+                          <rect x="48" y="18" width="20" height="5" rx="1" fill="#0284c7" />
                           
-                          {/* Bottle Neck */}
-                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
-                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                          
-                          {/* Bottle Shoulder */}
-                          <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
-                          
-                          {/* Bottle Body - Sleek Design */}
-                          <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                          
-                          {/* Water Fill with Gradient */}
+                          {/* Bottle Neck with Glass Effect */}
                           <defs>
-                            <linearGradient id="waterGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
-                              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                            <linearGradient id="glassGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7" />
+                              <stop offset="45%" stopColor="#dbeafe" stopOpacity="0.2" />
+                              <stop offset="55%" stopColor="#dbeafe" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#ffffff" stopOpacity="0.7" />
                             </linearGradient>
                           </defs>
-                          <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient2)" />
+                          <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="url(#glassGradient2)" />
+                          <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                           
-                          {/* Bottle Shine */}
-                          <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
+                          {/* Bottle Shoulder with Modern Shape */}
+                          <path d="M50,50 L40,68 Q35,78 40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85 Q95,78 90,68 L80,50" fill="url(#glassGradient2)" />
                           
-                          {/* Elegant Label Background with Gradient */}
+                          {/* Bottle Body Contour */}
+                          <path d="M40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85" fill="none" stroke="#93c5fd" strokeWidth="0.8" />
+                          <path d="M43,85 L43,257 Q43,277 65,277 Q87,277 87,257 L87,85" fill="none" stroke="#bfdbfe" strokeWidth="0.3" />
+                          
+                          {/* Water Fill with Enhanced Gradient */}
                           <defs>
-                            <linearGradient id="labelGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <linearGradient id="enhancedWaterGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.1" />
+                              <stop offset="20%" stopColor="#60a5fa" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#2563eb" stopOpacity="0.3" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M42,90 L88,90 L88,260 Q88,278 65,278 Q42,278 42,260 Z" fill="url(#enhancedWaterGradient2)" />
+                          
+                          {/* Shine and Reflections */}
+                          <path d="M42,60 Q42,140 42,200 L45,200 Q45,140 48,60" fill="white" fillOpacity="0.4" />
+                          <path d="M83,60 Q83,100 83,150 L80,150 Q80,100 77,60" fill="white" fillOpacity="0.3" />
+                          
+                          {/* Elegant Label with Premium Design */}
+                          <defs>
+                            <linearGradient id="premiumGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stopColor="#1e40af" />
-                              <stop offset="100%" stopColor="#3b82f6" />
+                              <stop offset="50%" stopColor="#3b82f6" />
+                              <stop offset="100%" stopColor="#1e40af" />
+                            </linearGradient>
+                            <linearGradient id="goldGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#fbbf24" />
+                              <stop offset="50%" stopColor="#f59e0b" />
+                              <stop offset="100%" stopColor="#d97706" />
                             </linearGradient>
                           </defs>
-                          <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient2)" strokeWidth="1.5" />
                           
-                          {/* Water Droplet Logo */}
-                          <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                          {/* Label Background */}
+                          <rect x="38" y="110" width="54" height="90" rx="4" fill="white" stroke="url(#premiumGradient2)" strokeWidth="1.5" />
                           
-                          {/* Label Text */}
-                          <text x="50" y="155" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
-                          <text x="50" y="168" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          {/* Premium Gold Accent Line */}
+                          <rect x="38" y="125" width="54" height="2" fill="url(#goldGradient2)" />
+                          <rect x="38" y="185" width="54" height="2" fill="url(#goldGradient2)" />
                           
-                          {/* pH Circle */}
-                          <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
-                          <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                          {/* Brand Logo - Stylized Water Drop */}
+                          <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="#3b82f6" fillOpacity="0.7" />
+                          <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="none" stroke="#1e40af" strokeWidth="0.5" />
+                          
+                          {/* Brand Name */}
+                          <text x="65" y="145" fontFamily="Arial" fontSize="12" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                          <text x="65" y="165" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          
+                          {/* pH Value in Modern Badge */}
+                          <rect x="50" y="175" width="30" height="15" rx="7.5" fill="#dbeafe" stroke="#60a5fa" strokeWidth="0.5" />
+                          <text x="65" y="185" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
                         </svg>
                       </div>
                       
@@ -317,58 +385,97 @@ const businessDetails: Record<string, BusinessDetail> = {
                     {/* Premium Bottle Display with Testing Equipment */}
                     <div className="flex items-center justify-center">
                       {/* Main Bottle */}
-                      <div className="relative w-32 h-56 z-20">
-                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                      <div className="relative w-36 h-56 z-20">
+                        <svg viewBox="0 0 130 300" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Background Glow */}
+                          <radialGradient id="bottleGlow3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.6" />
+                            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                          </radialGradient>
+                          <ellipse cx="65" cy="150" rx="60" ry="130" fill="url(#bottleGlow3)" />
+                          
                           {/* Bottle Cap */}
-                          <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
-                          <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
+                          <rect x="42" y="8" width="32" height="15" rx="3" fill="#0369a1" />
+                          <rect x="48" y="18" width="20" height="5" rx="1" fill="#0284c7" />
                           
-                          {/* Bottle Neck */}
-                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
-                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                          
-                          {/* Bottle Shoulder */}
-                          <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
-                          
-                          {/* Bottle Body - Sleek Design */}
-                          <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
-                          
-                          {/* Water Fill with Gradient */}
+                          {/* Bottle Neck with Glass Effect */}
                           <defs>
-                            <linearGradient id="waterGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
-                              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                            <linearGradient id="glassGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.7" />
+                              <stop offset="45%" stopColor="#dbeafe" stopOpacity="0.2" />
+                              <stop offset="55%" stopColor="#dbeafe" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#ffffff" stopOpacity="0.7" />
                             </linearGradient>
                           </defs>
-                          <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient3)" />
+                          <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="url(#glassGradient3)" />
+                          <path d="M47,23 L47,42 Q47,50 65,50 Q83,50 83,42 L83,23" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                           
-                          {/* Bottle Shine */}
-                          <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
+                          {/* Bottle Shoulder with Modern Shape */}
+                          <path d="M50,50 L40,68 Q35,78 40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85 Q95,78 90,68 L80,50" fill="url(#glassGradient3)" />
                           
-                          {/* Elegant Label Background with Gradient */}
+                          {/* Bottle Body Contour */}
+                          <path d="M40,85 L40,260 Q40,280 65,280 Q90,280 90,260 L90,85" fill="none" stroke="#93c5fd" strokeWidth="0.8" />
+                          <path d="M43,85 L43,257 Q43,277 65,277 Q87,277 87,257 L87,85" fill="none" stroke="#bfdbfe" strokeWidth="0.3" />
+                          
+                          {/* Water Fill with Enhanced Gradient */}
                           <defs>
-                            <linearGradient id="labelGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <linearGradient id="enhancedWaterGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.1" />
+                              <stop offset="20%" stopColor="#60a5fa" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#2563eb" stopOpacity="0.3" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M42,90 L88,90 L88,260 Q88,278 65,278 Q42,278 42,260 Z" fill="url(#enhancedWaterGradient3)" />
+                          
+                          {/* Shine and Reflections */}
+                          <path d="M42,60 Q42,140 42,200 L45,200 Q45,140 48,60" fill="white" fillOpacity="0.4" />
+                          <path d="M83,60 Q83,100 83,150 L80,150 Q80,100 77,60" fill="white" fillOpacity="0.3" />
+                          
+                          {/* Elegant Label with Premium Design */}
+                          <defs>
+                            <linearGradient id="premiumGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
                               <stop offset="0%" stopColor="#1e40af" />
-                              <stop offset="100%" stopColor="#3b82f6" />
+                              <stop offset="50%" stopColor="#3b82f6" />
+                              <stop offset="100%" stopColor="#1e40af" />
+                            </linearGradient>
+                            <linearGradient id="goldGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#fbbf24" />
+                              <stop offset="50%" stopColor="#f59e0b" />
+                              <stop offset="100%" stopColor="#d97706" />
                             </linearGradient>
                           </defs>
-                          <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient3)" strokeWidth="1.5" />
                           
-                          {/* Water Droplet Logo */}
-                          <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                          {/* Label Background */}
+                          <rect x="38" y="110" width="54" height="90" rx="4" fill="white" stroke="url(#premiumGradient3)" strokeWidth="1.5" />
                           
-                          {/* Label Text */}
-                          <text x="50" y="155" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
-                          <text x="50" y="170" fontFamily="Arial" fontSize="9" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          {/* Premium Gold Accent Line */}
+                          <rect x="38" y="125" width="54" height="2" fill="url(#goldGradient3)" />
+                          <rect x="38" y="185" width="54" height="2" fill="url(#goldGradient3)" />
                           
-                          {/* pH Circle */}
-                          <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
-                          <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                          {/* Brand Logo - Stylized Water Drop */}
+                          <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="#3b82f6" fillOpacity="0.7" />
+                          <path d="M65,95 Q55,80 45,95 Q45,115 65,115 Q85,115 85,95 Q75,80 65,95" fill="none" stroke="#1e40af" strokeWidth="0.5" />
                           
-                          {/* Quality Badge */}
-                          <g transform="translate(67, 100) rotate(30)">
-                            <circle cx="0" cy="0" r="12" fill="#fef3c7" stroke="#d97706" strokeWidth="1" />
-                            <text x="0" y="3" fontFamily="Arial" fontSize="5" textAnchor="middle" fontWeight="bold" fill="#92400e">PREMIUM</text>
+                          {/* Brand Name */}
+                          <text x="65" y="145" fontFamily="Arial" fontSize="12" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                          <text x="65" y="165" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          
+                          {/* pH Value in Modern Badge */}
+                          <rect x="50" y="175" width="30" height="15" rx="7.5" fill="#dbeafe" stroke="#60a5fa" strokeWidth="0.5" />
+                          <text x="65" y="185" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                          
+                          {/* Premium Badge */}
+                          <g transform="translate(90, 105) rotate(30)">
+                            <circle cx="0" cy="0" r="15" fill="#fef3c7" stroke="url(#goldGradient3)" strokeWidth="1" />
+                            <text x="0" y="3" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#92400e">PREMIUM</text>
+                          </g>
+                          
+                          {/* Quality Seal */}
+                          <g transform="translate(102, 160) rotate(15)">
+                            <circle cx="0" cy="0" r="12" fill="#ef4444" fillOpacity="0.8" />
+                            <circle cx="0" cy="0" r="10" fill="none" stroke="white" strokeWidth="0.5" />
+                            <text x="0" y="-2" fontFamily="Arial" fontSize="4" textAnchor="middle" fontWeight="bold" fill="white">QUALITY</text>
+                            <text x="0" y="4" fontFamily="Arial" fontSize="4" textAnchor="middle" fontWeight="bold" fill="white">TESTED</text>
                           </g>
                         </svg>
                       </div>
