@@ -3,8 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SolarCalculator from "./solar-calculator";
-// Import uploaded image for bottle design
+// Import uploaded images
 import bottleDesignImage from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
+import pccPolesImage from "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg";
 
 interface BusinessCardProps {
   title: string;
@@ -850,7 +851,7 @@ const businessDetails: Record<string, BusinessDetail> = {
         content: (
           <div className="space-y-4">
             <img 
-              src="@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg" 
+              src={pccPolesImage} 
               alt="Nirvik PCC Poles Manufacturing" 
               className="poles-image rounded-lg mb-6"
             />
@@ -1063,7 +1064,7 @@ const BusinessSection = () => {
     {
       title: "Nirvik PCC Poles",
       description: "Manufacturing high-quality PCC and RCC poles with advanced fabrication capabilities for infrastructure projects.",
-      image: "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg"
+      image: pccPolesImage
     }
   ];
 
