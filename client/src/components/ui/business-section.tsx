@@ -69,36 +69,55 @@ const businessDetails: Record<string, BusinessDetail> = {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full flex items-center justify-center">
                   {/* SVG Water Bottle */}
-                  <div className="relative w-32 h-56">
-                    {/* Bottle */}
+                  <div className="relative w-40 h-64">
+                    {/* Premium Bottle */}
                     <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
                       {/* Bottle Cap */}
-                      <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                      <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
+                      <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
                       
                       {/* Bottle Neck */}
-                      <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                      <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
+                      <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                       
-                      {/* Bottle Body */}
-                      <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                      {/* Bottle Shoulder */}
+                      <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
                       
-                      {/* Water Fill */}
-                      <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                      {/* Bottle Body - Sleek Design */}
+                      <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
+                      
+                      {/* Water Fill with Gradient */}
+                      <defs>
+                        <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
+                          <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient)" />
                       
                       {/* Bottle Shine */}
-                      <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                      <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
+                      
+                      {/* Elegant Label Background with Gradient */}
+                      <defs>
+                        <linearGradient id="labelGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#1e40af" />
+                          <stop offset="100%" stopColor="#3b82f6" />
+                        </linearGradient>
+                      </defs>
+                      <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient)" strokeWidth="1.5" />
+                      
+                      {/* Water Droplet Logo */}
+                      <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                      
+                      {/* Label Text */}
+                      <text x="50" y="155" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                      <text x="50" y="170" fontFamily="Arial" fontSize="9" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                      
+                      {/* pH Circle */}
+                      <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
+                      <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
                     </svg>
-                    
-                    {/* Label */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-28 h-32 bg-white/90 rounded-lg flex flex-col items-center justify-center shadow-md border border-blue-100">
-                      <div className="text-blue-700 text-xs font-bold">NIRVIK</div>
-                      <div className="text-blue-800 text-lg font-bold mb-2">ALKALINE</div>
-                      <div className="bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-full mb-2">
-                        pH 8.5+
-                      </div>
-                      <div className="text-xs text-center text-blue-700">
-                        Premium Quality<br/>Natural Minerals
-                      </div>
-                    </div>
                   </div>
                   
                   <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/80 px-4 py-2 rounded-full shadow-lg">
@@ -164,27 +183,53 @@ const businessDetails: Record<string, BusinessDetail> = {
                       </div>
                       
                       {/* Bottle 2 - Center, larger */}
-                      <div className="relative w-24 h-48 z-10">
+                      <div className="relative w-28 h-48 z-10">
                         <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
                           {/* Bottle Cap */}
-                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
+                          <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
                           
                           {/* Bottle Neck */}
-                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
+                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                           
-                          {/* Bottle Body */}
-                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          {/* Bottle Shoulder */}
+                          <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
                           
-                          {/* Water Fill */}
-                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          {/* Bottle Body - Sleek Design */}
+                          <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
+                          
+                          {/* Water Fill with Gradient */}
+                          <defs>
+                            <linearGradient id="waterGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient2)" />
                           
                           {/* Bottle Shine */}
-                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                          <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
                           
-                          {/* Center Label */}
-                          <rect x="33" y="120" width="34" height="50" rx="2" fill="white" stroke="#0369a1" strokeWidth="1" />
-                          <text x="50" y="140" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#0369a1">NIRVIK</text>
-                          <text x="50" y="155" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#0369a1">ALKALINE</text>
+                          {/* Elegant Label Background with Gradient */}
+                          <defs>
+                            <linearGradient id="labelGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stopColor="#1e40af" />
+                              <stop offset="100%" stopColor="#3b82f6" />
+                            </linearGradient>
+                          </defs>
+                          <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient2)" strokeWidth="1.5" />
+                          
+                          {/* Water Droplet Logo */}
+                          <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                          
+                          {/* Label Text */}
+                          <text x="50" y="155" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                          <text x="50" y="168" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          
+                          {/* pH Circle */}
+                          <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
+                          <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
                         </svg>
                       </div>
                       
@@ -275,26 +320,56 @@ const businessDetails: Record<string, BusinessDetail> = {
                       <div className="relative w-32 h-56 z-20">
                         <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
                           {/* Bottle Cap */}
-                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          <rect x="35" y="5" width="30" height="15" rx="3" fill="#0284c7" />
+                          <rect x="40" y="15" width="20" height="5" rx="1" fill="#0369a1" />
                           
                           {/* Bottle Neck */}
-                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="#dbeafe" fillOpacity="0.9" />
+                          <path d="M43,20 L43,40 Q43,47 50,47 Q57,47 57,40 L57,20" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
                           
-                          {/* Bottle Body */}
-                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          {/* Bottle Shoulder */}
+                          <path d="M40,47 L35,62 Q32,70 35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75 Q68,70 65,62 L60,47" fill="#dbeafe" fillOpacity="0.9" />
                           
-                          {/* Water Fill */}
-                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          {/* Bottle Body - Sleek Design */}
+                          <path d="M35,75 L35,240 Q35,260 50,260 Q65,260 65,240 L65,75" fill="none" stroke="#93c5fd" strokeWidth="0.5" />
+                          
+                          {/* Water Fill with Gradient */}
+                          <defs>
+                            <linearGradient id="waterGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.2" />
+                              <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
+                            </linearGradient>
+                          </defs>
+                          <path d="M36,80 L64,80 L64,240 Q64,258 50,258 Q36,258 36,240 Z" fill="url(#waterGradient3)" />
                           
                           {/* Bottle Shine */}
-                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                          <path d="M40,60 Q35,120 35,180 L38,180 Q40,120 42,60 Z" fill="white" fillOpacity="0.4" />
                           
-                          {/* Elegant Label */}
-                          <rect x="30" y="110" width="40" height="70" rx="3" fill="white" stroke="#0369a1" strokeWidth="1" />
-                          <text x="50" y="130" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#0369a1">NIRVIK</text>
-                          <text x="50" y="145" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#0369a1">ALKALINE</text>
-                          <circle cx="50" cy="160" r="10" fill="#0ea5e9" fillOpacity="0.3" />
-                          <text x="50" y="163" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#0369a1">pH 8.5+</text>
+                          {/* Elegant Label Background with Gradient */}
+                          <defs>
+                            <linearGradient id="labelGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stopColor="#1e40af" />
+                              <stop offset="100%" stopColor="#3b82f6" />
+                            </linearGradient>
+                          </defs>
+                          <rect x="32" y="110" width="36" height="80" rx="3" fill="white" stroke="url(#labelGradient3)" strokeWidth="1.5" />
+                          
+                          {/* Water Droplet Logo */}
+                          <path d="M50,130 Q45,120 40,130 Q40,140 50,140 Q60,140 60,130 Q55,120 50,130" fill="#60a5fa" />
+                          
+                          {/* Label Text */}
+                          <text x="50" y="155" fontFamily="Arial" fontSize="10" textAnchor="middle" fontWeight="bold" fill="#1e40af">NIRVIK</text>
+                          <text x="50" y="170" fontFamily="Arial" fontSize="9" textAnchor="middle" fontWeight="bold" fill="#1e40af">ALKALINE</text>
+                          
+                          {/* pH Circle */}
+                          <circle cx="50" cy="185" r="10" fill="#dbeafe" stroke="#60a5fa" strokeWidth="1" />
+                          <text x="50" y="188" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#1e40af">pH 8.5+</text>
+                          
+                          {/* Quality Badge */}
+                          <g transform="translate(67, 100) rotate(30)">
+                            <circle cx="0" cy="0" r="12" fill="#fef3c7" stroke="#d97706" strokeWidth="1" />
+                            <text x="0" y="3" fontFamily="Arial" fontSize="5" textAnchor="middle" fontWeight="bold" fill="#92400e">PREMIUM</text>
+                          </g>
                         </svg>
                       </div>
                       
