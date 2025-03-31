@@ -1038,7 +1038,7 @@ const BusinessSection = () => {
     {
       title: "Nirvik Alkaline",
       description: "Revolutionizing hydration with premium alkaline water solutions for better health and wellness.",
-      image: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE2OTg5NDQzMzN8MA&auto=format&fit=crop&w=600&q=80"
+      image: bottleDesignImage
     },
     {
       title: "Nirvik Solar",
