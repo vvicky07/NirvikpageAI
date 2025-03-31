@@ -45,8 +45,8 @@ const HeroSection = () => {
         
         {/* Fallback image for mobile */}
         <img 
-          src="https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI2fHxzdXN0YWluYWJsZSUyMGJ1c2luZXNzfGVufDB8fHx8MTY5ODk0NDA3M3ww&auto=format&fit=crop&w=1080&q=80" 
-          alt="Nirvik Group Sustainable Business" 
+          src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+          alt="Nirvik Group Industrial Infrastructure" 
           className="object-cover w-full h-full md:hidden"
         />
         
