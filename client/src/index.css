@@ -25,7 +25,11 @@
 @layer components {
   /* Image sizing for hero section */
   .hero-background-image {
-    @apply w-full h-full object-cover max-h-screen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 100vh;
   }
   
   /* Image sizing for electrical poles */

@@ -64,7 +64,7 @@ const HeroSection = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
                   alt="Nirvik Solar"
-                  className="w-full h-full object-contain max-h-screen"
+                  className="hero-background-image"
                 />
               </div>
             </SwiperSlide>
@@ -73,7 +73,7 @@ const HeroSection = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
                   alt="Nirvik Engineering"
-                  className="w-full h-full object-contain max-h-screen"
+                  className="hero-background-image"
                 />
               </div>
             </SwiperSlide>
@@ -82,16 +82,16 @@ const HeroSection = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
                   alt="Nirvik Agro"
-                  className="w-full h-full object-contain max-h-screen"
+                  className="hero-background-image"
                 />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  src="https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
                   alt="Nirvik PCC Poles"
-                  className="w-full h-full object-contain max-h-screen"
+                  className="hero-background-image"
                 />
               </div>
             </SwiperSlide>
@@ -177,7 +177,7 @@ const HeroSection = () => {
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
-                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
+                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1509228627152-72ae86a3be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
               ].map((segment, index) => (
                 <SwiperSlide key={index} className="!w-auto">
                   <div 
