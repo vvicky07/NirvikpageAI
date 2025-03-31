@@ -100,15 +100,31 @@ const HeroSection = () => {
           </p>
           
           {/* Business Segments Preview */}
-          <div className="flex justify-center mb-10 overflow-x-auto pb-2 max-w-4xl mx-auto">
-            <div className="flex space-x-2 md:space-x-4">
-              {["Alkaline", "Solar", "Engineering", "Agro", "PCC Poles"].map((segment, index) => (
+          <div className="flex justify-center mb-10 overflow-x-auto pb-2 max-w-5xl mx-auto">
+            <div className="flex space-x-4 md:space-x-6">
+              {[
+                {name: "Alkaline", image: nirvikImage2},
+                {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
+                {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
+                {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
+                {name: "PCC Poles", image: "https://images.unsplash.com/photo-1530240885906-317828ba21d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"}
+              ].map((segment, index) => (
                 <div 
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 text-white text-sm whitespace-nowrap hover:bg-primary/70 transition-all cursor-pointer"
+                  className="relative group cursor-pointer"
                   onClick={() => scrollToSection("businesses")}
                 >
-                  {segment}
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-white/40 shadow-lg transition-all group-hover:border-primary/70 group-hover:scale-105">
+                    <img 
+                      src={segment.image} 
+                      alt={`${segment.name} Business`} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-full"></div>
+                  </div>
+                  <div className="absolute bottom-1 left-0 right-0 text-center">
+                    <span className="text-white text-xs font-medium bg-black/40 px-2 py-1 rounded-full">{segment.name}</span>
+                  </div>
                 </div>
               ))}
             </div>

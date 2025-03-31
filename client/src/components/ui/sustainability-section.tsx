@@ -73,12 +73,12 @@ const SustainabilitySection = () => {
           <path d="M5 19.5h12"></path>
         </svg>
       ),
-      achievement: "Reduced carbon footprint by 40% since 2018"
+      achievement: "Green operations across all facilities"
     },
     {
       title: "Carbon Reduction Strategies",
       description: "We implement comprehensive carbon reduction plans across our business segments, from manufacturing to supply chain management.",
-      image: "https://images.unsplash.com/photo-1485612015730-74c48dcb3edf?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDl8fGNsaW1hdGUlMjBjaGFuZ2V8ZW58MHx8fHwxNjk4OTQ0NTQ3fDA&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0056b3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M7 22a5 5 0 0 1-5-5"></path>
