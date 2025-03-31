@@ -65,11 +65,26 @@ const businessDetails: Record<string, BusinessDetail> = {
         label: "Overview",
         content: (
           <div className="space-y-4">
-            <img 
-              src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE2OTg5NDQzMzN8MA&auto=format&fit=crop&w=600&q=80" 
-              alt="Nirvik Alkaline Water Bottle" 
-              className="w-full h-64 object-cover rounded-lg mb-6"
-            />
+            <div className="relative w-full h-64 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg overflow-hidden mb-6">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-[60%] h-full flex items-center justify-center">
+                  <img 
+                    src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE2OTg5NDQzMzN8MA&auto=format&fit=crop&w=600&q=80" 
+                    alt="Nirvik Alkaline Water Bottle" 
+                    className="h-56 object-contain"
+                  />
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/80 px-4 py-2 rounded-full shadow-lg">
+                    <div className="text-blue-700 font-bold text-lg tracking-wide">NIRVIK ALKALINE</div>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold py-1 px-3 rounded-full">
+                  pH 8.5+
+                </div>
+                <div className="absolute bottom-4 right-4 bg-green-600 text-white text-xs font-bold py-1 px-3 rounded-full">
+                  100% Natural Minerals
+                </div>
+              </div>
+            </div>
             <h3 className="text-2xl font-bold">Premium Alkaline Water</h3>
             <p>
               Nirvik Alkaline delivers premium alkaline water with a pH of 8+ that helps neutralize acidity in the body, 
@@ -96,14 +111,34 @@ const businessDetails: Record<string, BusinessDetail> = {
                 </ul>
               </div>
               <div className="flex flex-col justify-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDl8fHdhdGVyJTIwYm90dGxlfGVufDB8fHx8MTcwMzE0MTQwNnww&auto=format&fit=crop&w=600&q=80" 
-                  alt="Alkaline Water Bottles" 
-                  className="rounded-lg shadow-lg"
-                />
-                <div className="bg-blue-50 p-4 rounded-lg mt-4 text-center">
-                  <div className="text-blue-500 font-semibold">pH 8.5+</div>
-                  <div className="text-sm text-blue-600">Optimum alkalinity for health benefits</div>
+                <div className="relative bg-gradient-to-br from-blue-100 to-cyan-50 rounded-lg p-4 shadow-lg">
+                  <div className="flex justify-center items-center">
+                    <div className="relative">
+                      <img 
+                        src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDl8fHdhdGVyJTIwYm90dGxlfGVufDB8fHx8MTcwMzE0MTQwNnww&auto=format&fit=crop&w=600&q=80" 
+                        alt="Alkaline Water Bottles" 
+                        className="h-48 object-contain mb-2"
+                      />
+                      <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-full">
+                        Premium
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <div className="inline-block bg-white px-4 py-2 rounded-full shadow-md">
+                      <span className="text-blue-700 font-bold">NIRVIK ALKALINE</span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 mt-4">
+                    <div className="bg-blue-600 text-white p-2 rounded-lg text-center">
+                      <div className="font-semibold">pH 8.5+</div>
+                      <div className="text-xs">Balanced Alkalinity</div>
+                    </div>
+                    <div className="bg-green-600 text-white p-2 rounded-lg text-center">
+                      <div className="font-semibold">Mineral Rich</div>
+                      <div className="text-xs">For Better Health</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -135,15 +170,38 @@ const businessDetails: Record<string, BusinessDetail> = {
                 </div>
               </div>
               <div className="order-first md:order-last">
-                <div className="relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1610483832795-4d8e2c76d581?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3MDMxNDE0MDZ8MA&auto=format&fit=crop&w=600&q=80" 
-                    alt="Premium Alkaline Water Bottles" 
-                    className="rounded-lg shadow-lg"
-                  />
-                  <div className="absolute bottom-4 right-4">
-                    <div className="bg-white/90 text-primary font-bold py-2 px-4 rounded-full text-sm shadow-md">
-                      Premium Quality
+                <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-6 shadow-lg">
+                  <div className="absolute top-3 right-3 z-10">
+                    <div className="bg-blue-600 text-white font-bold py-1 px-3 rounded-full text-xs shadow-md">
+                      Premium
+                    </div>
+                  </div>
+                  
+                  <div className="relative flex justify-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1610483832795-4d8e2c76d581?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3MDMxNDE0MDZ8MA&auto=format&fit=crop&w=600&q=80" 
+                      alt="Premium Alkaline Water Bottles" 
+                      className="h-52 object-contain relative z-10"
+                    />
+                  </div>
+                  
+                  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/20 rounded-full"></div>
+                  <div className="absolute -top-10 -left-10 w-32 h-32 bg-cyan-500/20 rounded-full"></div>
+                  
+                  <div className="text-center mt-4 relative z-10">
+                    <div className="bg-white py-2 px-4 rounded-full inline-block shadow-lg">
+                      <span className="text-blue-700 font-bold">NIRVIK ALKALINE</span>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-2 mt-4 relative z-10">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-2 rounded-lg text-center">
+                      <div className="font-semibold">7-Stage</div>
+                      <div className="text-xs">Purification</div>
+                    </div>
+                    <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-2 rounded-lg text-center">
+                      <div className="font-semibold">100%</div>
+                      <div className="text-xs">Pure Quality</div>
                     </div>
                   </div>
                 </div>
