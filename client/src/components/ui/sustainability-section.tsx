@@ -90,7 +90,7 @@ const SustainabilitySection = () => {
           <path d="M15 13v.1"></path>
         </svg>
       ),
-      achievement: "On track for carbon neutrality by 2030"
+      achievement: "On track for carbon neutrality by 2050"
     },
     {
       title: "Community Projects",
