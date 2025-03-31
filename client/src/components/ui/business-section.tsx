@@ -67,12 +67,40 @@ const businessDetails: Record<string, BusinessDetail> = {
           <div className="space-y-4">
             <div className="relative w-full h-64 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg overflow-hidden mb-6">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-[60%] h-full flex items-center justify-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1606041008023-472dfb5e530f?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE2OTg5NDQzMzN8MA&auto=format&fit=crop&w=600&q=80" 
-                    alt="Nirvik Alkaline Water Bottle" 
-                    className="h-56 object-contain"
-                  />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  {/* SVG Water Bottle */}
+                  <div className="relative w-32 h-56">
+                    {/* Bottle */}
+                    <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                      {/* Bottle Cap */}
+                      <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                      
+                      {/* Bottle Neck */}
+                      <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                      
+                      {/* Bottle Body */}
+                      <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                      
+                      {/* Water Fill */}
+                      <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                      
+                      {/* Bottle Shine */}
+                      <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                    </svg>
+                    
+                    {/* Label */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-28 h-32 bg-white/90 rounded-lg flex flex-col items-center justify-center shadow-md border border-blue-100">
+                      <div className="text-blue-700 text-xs font-bold">NIRVIK</div>
+                      <div className="text-blue-800 text-lg font-bold mb-2">ALKALINE</div>
+                      <div className="bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-full mb-2">
+                        pH 8.5+
+                      </div>
+                      <div className="text-xs text-center text-blue-700">
+                        Premium Quality<br/>Natural Minerals
+                      </div>
+                    </div>
+                  </div>
+                  
                   <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/80 px-4 py-2 rounded-full shadow-lg">
                     <div className="text-blue-700 font-bold text-lg tracking-wide">NIRVIK ALKALINE</div>
                   </div>
@@ -111,24 +139,87 @@ const businessDetails: Record<string, BusinessDetail> = {
                 </ul>
               </div>
               <div className="flex flex-col justify-center">
-                <div className="relative bg-gradient-to-br from-blue-100 to-cyan-50 rounded-lg p-4 shadow-lg">
+                <div className="relative bg-gradient-to-br from-blue-100 to-cyan-50 rounded-lg p-4 shadow-lg h-full">
                   <div className="flex justify-center items-center">
-                    <div className="relative">
-                      <img 
-                        src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDl8fHdhdGVyJTIwYm90dGxlfGVufDB8fHx8MTcwMzE0MTQwNnww&auto=format&fit=crop&w=600&q=80" 
-                        alt="Alkaline Water Bottles" 
-                        className="h-48 object-contain mb-2"
-                      />
+                    {/* Group of SVG Bottles */}
+                    <div className="relative flex space-x-2 h-48">
+                      {/* Bottle 1 */}
+                      <div className="relative w-20 h-48 transform -rotate-6">
+                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Bottle Cap */}
+                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          
+                          {/* Bottle Neck */}
+                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          
+                          {/* Bottle Body */}
+                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          
+                          {/* Water Fill */}
+                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          
+                          {/* Bottle Shine */}
+                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                        </svg>
+                      </div>
+                      
+                      {/* Bottle 2 - Center, larger */}
+                      <div className="relative w-24 h-48 z-10">
+                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Bottle Cap */}
+                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          
+                          {/* Bottle Neck */}
+                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          
+                          {/* Bottle Body */}
+                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          
+                          {/* Water Fill */}
+                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          
+                          {/* Bottle Shine */}
+                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                          
+                          {/* Center Label */}
+                          <rect x="33" y="120" width="34" height="50" rx="2" fill="white" stroke="#0369a1" strokeWidth="1" />
+                          <text x="50" y="140" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#0369a1">NIRVIK</text>
+                          <text x="50" y="155" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#0369a1">ALKALINE</text>
+                        </svg>
+                      </div>
+                      
+                      {/* Bottle 3 */}
+                      <div className="relative w-20 h-48 transform rotate-6">
+                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Bottle Cap */}
+                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          
+                          {/* Bottle Neck */}
+                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          
+                          {/* Bottle Body */}
+                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          
+                          {/* Water Fill */}
+                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          
+                          {/* Bottle Shine */}
+                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                        </svg>
+                      </div>
+                      
                       <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-full">
                         Premium
                       </div>
                     </div>
                   </div>
+                  
                   <div className="text-center mt-2">
                     <div className="inline-block bg-white px-4 py-2 rounded-full shadow-md">
                       <span className="text-blue-700 font-bold">NIRVIK ALKALINE</span>
                     </div>
                   </div>
+                  
                   <div className="grid grid-cols-2 gap-2 mt-4">
                     <div className="bg-blue-600 text-white p-2 rounded-lg text-center">
                       <div className="font-semibold">pH 8.5+</div>
@@ -178,11 +269,57 @@ const businessDetails: Record<string, BusinessDetail> = {
                   </div>
                   
                   <div className="relative flex justify-center">
-                    <img 
-                      src="https://images.unsplash.com/photo-1610483832795-4d8e2c76d581?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDIzfHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3MDMxNDE0MDZ8MA&auto=format&fit=crop&w=600&q=80" 
-                      alt="Premium Alkaline Water Bottles" 
-                      className="h-52 object-contain relative z-10"
-                    />
+                    {/* Premium Bottle Display with Testing Equipment */}
+                    <div className="flex items-center justify-center">
+                      {/* Main Bottle */}
+                      <div className="relative w-32 h-56 z-20">
+                        <svg viewBox="0 0 100 280" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full">
+                          {/* Bottle Cap */}
+                          <rect x="35" y="10" width="30" height="15" rx="2" fill="#0369a1" />
+                          
+                          {/* Bottle Neck */}
+                          <path d="M40,25 L40,40 Q40,45 50,45 Q60,45 60,40 L60,25" fill="#cce7f7" />
+                          
+                          {/* Bottle Body */}
+                          <path d="M35,45 Q32,50 32,55 L32,240 Q32,260 50,260 Q68,260 68,240 L68,55 Q68,50 65,45" fill="#ddf0fd" fillOpacity="0.9" />
+                          
+                          {/* Water Fill */}
+                          <path d="M35,80 L65,80 L65,240 Q65,255 50,255 Q35,255 35,240 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          
+                          {/* Bottle Shine */}
+                          <path d="M40,50 Q35,100 35,150 L38,150 Q40,100 45,50 Z" fill="white" fillOpacity="0.5" />
+                          
+                          {/* Elegant Label */}
+                          <rect x="30" y="110" width="40" height="70" rx="3" fill="white" stroke="#0369a1" strokeWidth="1" />
+                          <text x="50" y="130" fontFamily="Arial" fontSize="8" textAnchor="middle" fontWeight="bold" fill="#0369a1">NIRVIK</text>
+                          <text x="50" y="145" fontFamily="Arial" fontSize="7" textAnchor="middle" fontWeight="bold" fill="#0369a1">ALKALINE</text>
+                          <circle cx="50" cy="160" r="10" fill="#0ea5e9" fillOpacity="0.3" />
+                          <text x="50" y="163" fontFamily="Arial" fontSize="6" textAnchor="middle" fontWeight="bold" fill="#0369a1">pH 8.5+</text>
+                        </svg>
+                      </div>
+                      
+                      {/* Laboratory Visual Elements to reinforce quality testing */}
+                      <div className="absolute top-10 -left-4 z-10 opacity-70">
+                        <svg width="40" height="60" viewBox="0 0 40 60" xmlns="http://www.w3.org/2000/svg">
+                          {/* Test Tube */}
+                          <path d="M15,5 L15,40 Q15,50 20,50 Q25,50 25,40 L25,5 Z" fill="#f0f9ff" stroke="#0369a1" strokeWidth="1" />
+                          <path d="M15,40 L25,40 L25,45 Q25,50 20,50 Q15,50 15,45 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          <line x1="15" y1="5" x2="25" y2="5" stroke="#0369a1" strokeWidth="1" />
+                        </svg>
+                      </div>
+                      
+                      <div className="absolute top-20 -right-5 z-10 opacity-70">
+                        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                          {/* Beaker */}
+                          <path d="M10,5 L10,30 Q10,35 20,35 Q30,35 30,30 L30,5 Z" fill="#f0f9ff" stroke="#0369a1" strokeWidth="1" />
+                          <path d="M10,25 L30,25 L30,30 Q30,35 20,35 Q10,35 10,30 Z" fill="#0ea5e9" fillOpacity="0.3" />
+                          <line x1="10" y1="5" x2="30" y2="5" stroke="#0369a1" strokeWidth="1" />
+                          <line x1="15" y1="10" x2="15" y2="20" stroke="#0369a1" strokeWidth="0.5" strokeDasharray="2" />
+                          <line x1="20" y1="10" x2="20" y2="20" stroke="#0369a1" strokeWidth="0.5" strokeDasharray="2" />
+                          <line x1="25" y1="10" x2="25" y2="20" stroke="#0369a1" strokeWidth="0.5" strokeDasharray="2" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/20 rounded-full"></div>
