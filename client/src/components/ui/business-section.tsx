@@ -852,7 +852,7 @@ const businessDetails: Record<string, BusinessDetail> = {
             <img 
               src="https://images.unsplash.com/photo-1564336217872-eebdc397d02c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
               alt="Nirvik PCC Poles Manufacturing" 
-              className="w-full h-64 object-cover rounded-lg mb-6"
+              className="poles-image rounded-lg mb-6"
             />
             <h3 className="text-2xl font-bold">Leading Manufacturer of Quality Concrete Poles</h3>
             <p>
