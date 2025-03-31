@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { scrollToSection } from "@/lib/utils";
 import gsap from "gsap";
+// Import uploaded images
+import nirvikImage1 from "@assets/Screenshot_28-1-2025_12732_.jpeg";
+import nirvikImage2 from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
 
 const HeroSection = () => {
   const heroContentRef = useRef<HTMLDivElement>(null);
@@ -27,25 +30,18 @@ const HeroSection = () => {
     <section id="home" className="relative h-screen w-full overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 left-0 w-full h-full bg-neutral-900">
-        {/* Video Background */}
+        {/* Background Image for desktop */}
         <div className="hidden md:block w-full h-full object-cover">
-          <video
+          <img 
+            src={nirvikImage2} 
+            alt="Nirvik Group Corporate Background"
             className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source 
-              src="https://player.vimeo.com/progressive_redirect/playback/562305335/rendition/1080p/file.mp4?loc=external&oauth2_token_id=57447761&signature=d6f8106ce952a17a13e6fca0e7eaf1e85b7f5d89b1c0dcb8db42bf8e77825b0c" 
-              type="video/mp4" 
-            />
-          </video>
+          />
         </div>
         
         {/* Fallback image for mobile */}
         <img 
-          src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+          src={nirvikImage1} 
           alt="Nirvik Group Industrial Infrastructure" 
           className="object-cover w-full h-full md:hidden"
         />
