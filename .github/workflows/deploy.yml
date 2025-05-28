@@ -24,11 +24,11 @@ jobs:
     - name: Build
       run: |
         export NODE_ENV=production
-        npx vite build --outDir=build
+        npx vite build
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+        publish_dir: ./dist/public
         cname: nirvikgroup.com
