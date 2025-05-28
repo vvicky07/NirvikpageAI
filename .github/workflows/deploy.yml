@@ -29,8 +29,8 @@ jobs:
     - name: Copy files to correct location
       run: |
         mkdir -p deploy
-        cp -r dist/* deploy/
-        cp client/public/* deploy/ || true
+        cp -r dist/public/* deploy/
+        cp CNAME deploy/ || true
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
