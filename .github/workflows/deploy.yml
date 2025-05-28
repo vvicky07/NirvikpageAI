@@ -23,14 +23,19 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Build
+    - name: Build site
       run: npm run build
-      
-    - name: Copy files to correct location
+        
+    - name: Prepare deployment
       run: |
         mkdir -p deploy
-        cp -r dist/public/* deploy/
-        cp CNAME deploy/ || true
+        # Copy the built frontend files from dist/public
+        if [ -d "dist/public" ]; then
+          cp -r dist/public/* deploy/
+        else
+          cp -r dist/* deploy/
+        fi
+        echo "nirvikgroup.com" > deploy/CNAME
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
