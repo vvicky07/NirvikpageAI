@@ -162,11 +162,11 @@ const HeroSection = () => {
           {/* Business Segments Preview - Slider */}
           <div className="mb-10 max-w-5xl mx-auto">
             <Swiper
-              modules={[Autoplay, EffectFade]}
+              modules={[Autoplay]}
               spaceBetween={8}
               slidesPerView="auto"
               centeredSlides={true}
-              loop={true}
+              loop={false}
               autoplay={{
                 delay: 2000,
                 disableOnInteraction: false,
@@ -176,6 +176,7 @@ const HeroSection = () => {
               {[
                 {name: "Alkaline", image: nirvikImage2},
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
+                {name: "Vikram Singh & Power", image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBvd2VyJTIwZ3JpZHxlbnwwfHx8fDE2OTg5NDQ0MDF8MA&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Agro", image: "https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80&fit=crop&crop=edges"},
                 {name: "PCC Poles", image: pccPolesImage}
