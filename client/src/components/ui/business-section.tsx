@@ -4,7 +4,7 @@ import { Button } from "./button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 import SolarCalculator from "./solar-calculator";
 // Import uploaded images
-const bottleDesignImage = "https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+import bottleDesignImage from "@assets/image_1748546335623.png";
 const pccPolesImage = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 interface BusinessCardProps {

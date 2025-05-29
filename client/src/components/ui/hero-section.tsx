@@ -7,7 +7,8 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-// Use placeholder images for now - will work in production
+// Import authentic Nirvik images
+import alkalineBottleImage from "@assets/image_1748546335623.png";
 const nirvikImage1 = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
 const nirvikImage2 = "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
 const pccPolesImage = "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
@@ -51,12 +52,17 @@ const HeroSection = () => {
             className="w-full h-full"
           >
             <SwiperSlide>
-              <div className="relative w-full h-full">
-                <img 
-                  src={nirvikImage2} 
-                  alt="Nirvik Group Corporate Background"
-                  className="hero-background-image"
-                />
+              <div className="relative w-full h-full bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img 
+                    src={alkalineBottleImage} 
+                    alt="Nirvik Alkaline Premium Water"
+                    className="w-auto h-3/4 object-contain drop-shadow-2xl"
+                  />
+                </div>
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white/90 px-6 py-3 rounded-full shadow-lg">
+                  <div className="text-blue-700 font-bold text-xl tracking-wide">NIRVIK ALKALINE</div>
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
