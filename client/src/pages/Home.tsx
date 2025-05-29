@@ -8,7 +8,7 @@ import ParallaxSection from "../components/ui/parallax-section";
 import SustainabilitySection from "../components/ui/sustainability-section";
 import TestimonialsSection from "../components/ui/testimonials-section";
 import ContactSection from "../components/ui/contact-section";
-import MapSection from "../components/ui/map-section";
+
 import Footer from "../components/ui/footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,7 +55,6 @@ export default function Home() {
         <SustainabilitySection />
         <TestimonialsSection />
         <ContactSection />
-        <MapSection />
       </main>
       <Footer />
     </div>
