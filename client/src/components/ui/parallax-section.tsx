@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { scrollToSection } from "@/lib/utils";
+import { scrollToSection } from "../../lib/utils";
 import gsap from "gsap";
 
 const ParallaxSection = () => {

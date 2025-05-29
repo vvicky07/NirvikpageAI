@@ -1,8 +1,8 @@
-import { scrollToSection } from "@/lib/utils";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { scrollToSection } from "../../lib/utils";
+import { Input } from "./input";
+import { Button } from "./button";
 import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "../../hooks/use-toast";
 
 const Footer = () => {
   const [email, setEmail] = useState("");

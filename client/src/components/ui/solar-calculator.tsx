@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
+import { Button } from "./button";
 import {
   Card,
   CardContent,
@@ -7,14 +7,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "./card";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "./select";
 import {
   BarChart,
   Bar,
@@ -30,7 +30,7 @@ import {
   Pie,
   Cell,
 } from 'recharts';
-import { formatNumber } from '@/lib/utils';
+import { formatNumber } from '../../lib/utils';
 
 interface CalculatorInputs {
   location: RegionKey;

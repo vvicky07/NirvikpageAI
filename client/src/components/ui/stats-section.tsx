@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { animateValue } from "@/lib/utils";
+import { animateValue } from "../../lib/utils";
 
 interface StatItemProps {
   value: number;

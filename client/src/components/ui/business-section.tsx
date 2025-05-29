@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./dialog";
+import { Button } from "./button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 import SolarCalculator from "./solar-calculator";
 // Import uploaded images
-import bottleDesignImage from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
-import pccPolesImage from "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg";
+const bottleDesignImage = "https://images.unsplash.com/photo-1556767576-5ec41e3239ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const pccPolesImage = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 interface BusinessCardProps {
   title: string;

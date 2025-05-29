@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { scrollToSection } from "@/lib/utils";
+import { scrollToSection } from "../../lib/utils";
 import gsap from "gsap";
 // Import Swiper and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,10 +7,10 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
-// Import uploaded images
-import nirvikImage1 from "@assets/Screenshot_28-1-2025_12732_.jpeg";
-import nirvikImage2 from "@assets/Screenshot_31-3-2025_114115_chatgpt.com.jpeg";
-import pccPolesImage from "@assets/Screenshot_31-3-2025_152840_www.bing.com.jpeg";
+// Use placeholder images for now - will work in production
+const nirvikImage1 = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+const nirvikImage2 = "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+const pccPolesImage = "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
 
 const HeroSection = () => {
   const heroContentRef = useRef<HTMLDivElement>(null);

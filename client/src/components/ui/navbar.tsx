@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
-import { scrollToSection } from "@/lib/utils";
+import { cn } from "../../lib/utils";
+import { scrollToSection } from "../../lib/utils";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

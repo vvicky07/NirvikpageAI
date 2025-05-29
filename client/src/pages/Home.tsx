@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import Navbar from "@/components/ui/navbar";
-import HeroSection from "@/components/ui/hero-section";
-import StatsSection from "@/components/ui/stats-section";
-import AboutSection from "@/components/ui/about-section";
-import BusinessSection from "@/components/ui/business-section";
-import ParallaxSection from "@/components/ui/parallax-section";
-import SustainabilitySection from "@/components/ui/sustainability-section";
-import TestimonialsSection from "@/components/ui/testimonials-section";
-import ContactSection from "@/components/ui/contact-section";
-import MapSection from "@/components/ui/map-section";
-import Footer from "@/components/ui/footer";
+import Navbar from "../components/ui/navbar";
+import HeroSection from "../components/ui/hero-section";
+import StatsSection from "../components/ui/stats-section";
+import AboutSection from "../components/ui/about-section";
+import BusinessSection from "../components/ui/business-section";
+import ParallaxSection from "../components/ui/parallax-section";
+import SustainabilitySection from "../components/ui/sustainability-section";
+import TestimonialsSection from "../components/ui/testimonials-section";
+import ContactSection from "../components/ui/contact-section";
+import MapSection from "../components/ui/map-section";
+import Footer from "../components/ui/footer";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
