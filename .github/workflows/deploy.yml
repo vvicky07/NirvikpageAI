@@ -32,7 +32,7 @@ jobs:
     - name: Build
       run: |
         cd client
-        npx vite build --outDir ../dist --emptyOutDir --base=./
+        NODE_OPTIONS="--max-old-space-size=4096" npx vite build --mode production
         
     - name: Setup Pages
       uses: actions/configure-pages@v3
