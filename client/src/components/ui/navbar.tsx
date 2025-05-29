@@ -32,7 +32,7 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-neutral-900" : "bg-transparent"
+        isScrolled ? "bg-neutral-900/95 backdrop-blur-sm" : "bg-neutral-900/20 backdrop-blur-sm"
       )}
     >
       <nav className="py-4 px-6 md:px-12 flex justify-between items-center">
@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink href="contact" label="Contact" onClick={handleNavLinkClick} />
           <a 
             href="#" 
-            className="bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-6 rounded-md transition duration-300"
+            className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
           >
             Investor Relations
           </a>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <MobileNavLink href="businesses" label="Our Businesses" onClick={handleNavLinkClick} />
           <MobileNavLink href="sustainability" label="Sustainability" onClick={handleNavLinkClick} />
           <MobileNavLink href="contact" label="Contact" onClick={handleNavLinkClick} />
-          <a href="#" className="block bg-secondary hover:bg-secondary-dark text-white font-medium py-2 px-4 rounded-md mt-4 text-center">
+          <a href="#" className="block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md mt-4 text-center">
             Investor Relations
           </a>
         </div>
@@ -106,7 +106,7 @@ const NavLink = ({ href, label, onClick }: NavLinkProps) => {
   return (
     <a 
       href={`#${href}`} 
-      className="relative nav-link text-white font-medium hover:text-secondary transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
+      className="relative nav-link text-white font-medium hover:text-green-400 transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full"
       onClick={(e) => {
         e.preventDefault();
         onClick(href);
@@ -121,7 +121,7 @@ const MobileNavLink = ({ href, label, onClick }: NavLinkProps) => {
   return (
     <a 
       href={`#${href}`} 
-      className="block text-white font-medium hover:text-secondary py-2 transition-colors duration-300"
+      className="block text-white font-medium hover:text-green-400 py-2 transition-colors duration-300"
       onClick={(e) => {
         e.preventDefault();
         onClick(href);
