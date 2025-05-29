@@ -179,7 +179,7 @@ const HeroSection = () => {
               className="w-full"
             >
               {[
-                {name: "Alkaline", image: nirvikImage2},
+                {name: "Alkaline", image: alkalineBottleImage},
                 {name: "Solar", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
                 {name: "Vikram Singh & Power", image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHBvd2VyJTIwZ3JpZHxlbnwwfHx8fDE2OTg5NDQ0MDF8MA&auto=format&fit=crop&w=188&q=80"},
                 {name: "Engineering", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=188&q=80"},
