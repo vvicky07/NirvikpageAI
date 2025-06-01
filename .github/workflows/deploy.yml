@@ -34,11 +34,8 @@ jobs:
     - name: Build application
       run: |
         export NODE_ENV=production
-        npx vite build \
-          --config client/vite.config.ts \
-          --root client \
-          --outDir ../dist \
-          --emptyOutDir
+        cd client
+        npx vite build --outDir ../dist --emptyOutDir
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
