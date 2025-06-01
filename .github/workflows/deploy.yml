@@ -28,15 +28,17 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
-    - name: Copy node_modules to client
-      run: |
-        cp -r node_modules client/
+    - name: Create build directory
+      run: mkdir -p dist
         
     - name: Build application
       run: |
         export NODE_ENV=production
-        cd client
-        NODE_OPTIONS="--max-old-space-size=8192" npx vite build --outDir ../dist --emptyOutDir
+        npx vite build \
+          --config client/vite.config.ts \
+          --root client \
+          --outDir ../dist \
+          --emptyOutDir
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
