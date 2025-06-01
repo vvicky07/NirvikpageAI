@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import alkalineBottleImage from "@assets/image_1748546335623.png";
 const nirvikImage1 = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
 const nirvikImage2 = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
-const pccPolesImage = "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const pccPolesImage = "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 const HeroSection = () => {
   const heroContentRef = useRef<HTMLDivElement>(null);
