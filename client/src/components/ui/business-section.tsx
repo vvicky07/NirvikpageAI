@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 import SolarCalculator from "./solar-calculator";
 // Import uploaded images
 import bottleDesignImage from "@assets/image_1748546335623.png";
-const pccPolesImage = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
+const pccPolesImage = "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 interface BusinessCardProps {
   title: string;
