@@ -31,9 +31,7 @@ jobs:
     - name: Build application
       run: |
         export NODE_ENV=production
-        cd client
-        npm ci
-        NODE_OPTIONS="--max-old-space-size=8192" npx vite build --outDir ../dist --emptyOutDir
+        NODE_OPTIONS="--max-old-space-size=8192" npx vite build --config client/vite.config.ts --outDir dist --emptyOutDir
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
