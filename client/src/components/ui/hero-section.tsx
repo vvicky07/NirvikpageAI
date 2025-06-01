@@ -9,8 +9,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 // Import authentic Nirvik images
 import alkalineBottleImage from "@assets/image_1748546335623.png";
-const nirvikImage1 = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
-const nirvikImage2 = "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+const nirvikImage1 = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+const nirvikImage2 = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
 const pccPolesImage = "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80";
 
 const HeroSection = () => {
@@ -68,8 +68,8 @@ const HeroSection = () => {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
-                  alt="Nirvik Solar"
+                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                  alt="Nirvik Solar Energy"
                   className="hero-background-image"
                 />
               </div>
@@ -77,17 +77,17 @@ const HeroSection = () => {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                  src={nirvikImage1} 
+                  alt="Nirvik Corporate Building"
+                  className="hero-background-image"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative w-full h-full">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
                   alt="Nirvik Engineering"
-                  className="hero-background-image"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="relative w-full h-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1525498128493-380d1990a112?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80&fit=crop&crop=edges" 
-                  alt="Nirvik Agro"
                   className="hero-background-image"
                 />
               </div>
