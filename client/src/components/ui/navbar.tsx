@@ -32,18 +32,18 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-neutral-900/95 backdrop-blur-sm" : "bg-neutral-900/20 backdrop-blur-sm"
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-white/90 backdrop-blur-sm"
       )}
     >
-      <nav className="py-4 px-6 md:px-12 flex justify-between items-center">
+      <nav className="py-3 px-4 sm:px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
         <a href="#" className="flex items-center" onClick={(e) => {
           e.preventDefault();
           handleNavLinkClick("home");
         }}>
-          <div className="h-10 w-10 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-white font-bold">NG</span>
+          <div className="h-8 w-8 sm:h-10 sm:w-10 bg-blue-600 rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-sm sm:text-base">NG</span>
           </div>
-          <span className="ml-3 text-xl font-bold font-montserrat text-white">NIRVIK GROUP</span>
+          <span className="ml-2 sm:ml-3 text-lg sm:text-xl font-bold font-montserrat text-gray-900">NIRVIK GROUP</span>
         </a>
         
         <div className="hidden lg:flex items-center space-x-8">
@@ -54,14 +54,14 @@ const Navbar = () => {
           <NavLink href="contact" label="Contact" onClick={handleNavLinkClick} />
           <a 
             href="#" 
-            className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition duration-300"
           >
             Investor Relations
           </a>
         </div>
         
         <button 
-          className="lg:hidden text-white"
+          className="lg:hidden text-gray-900 p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
@@ -80,14 +80,14 @@ const Navbar = () => {
       </nav>
       
       {/* Mobile menu */}
-      <div className={cn("lg:hidden bg-neutral-900", isMobileMenuOpen ? "block" : "hidden")}>
-        <div className="px-6 py-4 space-y-3">
+      <div className={cn("lg:hidden bg-white border-t border-gray-200", isMobileMenuOpen ? "block" : "hidden")}>
+        <div className="px-4 py-4 space-y-3 max-w-7xl mx-auto">
           <MobileNavLink href="home" label="Home" onClick={handleNavLinkClick} />
           <MobileNavLink href="about" label="About Us" onClick={handleNavLinkClick} />
           <MobileNavLink href="businesses" label="Our Businesses" onClick={handleNavLinkClick} />
           <MobileNavLink href="sustainability" label="Sustainability" onClick={handleNavLinkClick} />
           <MobileNavLink href="contact" label="Contact" onClick={handleNavLinkClick} />
-          <a href="#" className="block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md mt-4 text-center">
+          <a href="#" className="block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md mt-4 text-center">
             Investor Relations
           </a>
         </div>
@@ -106,7 +106,7 @@ const NavLink = ({ href, label, onClick }: NavLinkProps) => {
   return (
     <a 
       href={`#${href}`} 
-      className="relative nav-link text-white font-medium hover:text-green-400 transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-green-400 after:transition-all after:duration-300 hover:after:w-full"
+      className="relative nav-link text-gray-700 font-medium hover:text-blue-600 transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
       onClick={(e) => {
         e.preventDefault();
         onClick(href);
@@ -121,7 +121,7 @@ const MobileNavLink = ({ href, label, onClick }: NavLinkProps) => {
   return (
     <a 
       href={`#${href}`} 
-      className="block text-white font-medium hover:text-green-400 py-2 transition-colors duration-300"
+      className="block text-gray-700 font-medium hover:text-blue-600 py-3 transition-colors duration-300 border-b border-gray-100"
       onClick={(e) => {
         e.preventDefault();
         onClick(href);

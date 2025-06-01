@@ -35,9 +35,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden pt-16">
       {/* Background */}
-      <div className="absolute top-0 left-0 w-full h-full bg-neutral-900">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900">
         {/* Background Image Slider */}
         <div className="hidden md:block w-full h-full object-cover">
           <Swiper
@@ -104,12 +104,14 @@ const HeroSection = () => {
           </Swiper>
         </div>
         
-        {/* Fallback image for mobile */}
-        <img 
-          src={nirvikImage1} 
-          alt="Nirvik Group Industrial Infrastructure" 
-          className="object-cover w-full h-full md:hidden"
-        />
+        {/* Mobile Background */}
+        <div className="md:hidden w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 flex items-center justify-center">
+          <img 
+            src={alkalineBottleImage} 
+            alt="Nirvik Alkaline Premium Water"
+            className="w-auto h-1/2 object-contain drop-shadow-2xl opacity-20"
+          />
+        </div>
         
         {/* Corporate Visual Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
@@ -157,10 +159,10 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white font-montserrat leading-tight shadow-text drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white font-montserrat leading-tight shadow-text drop-shadow-lg px-4">
             Powering a Sustainable Future with Innovation & Resilience
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto shadow-text drop-shadow-lg">
+          <p className="text-lg sm:text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto shadow-text drop-shadow-lg px-4">
             Building tomorrow's infrastructure with today's responsibility
           </p>
           
