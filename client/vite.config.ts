@@ -14,19 +14,26 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, '../attached_assets'),
     },
   },
-  base: './',
+  base: '/',
   build: {
-    outDir: '../dist',
+    outDir: '../docs',
     emptyOutDir: true,
     sourcemap: false,
-    minify: 'esbuild',
+    minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-        }
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          animations: ['framer-motion', 'swiper']
+        },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js'
       }
     },
+    assetsDir: 'assets',
     chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
